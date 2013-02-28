@@ -454,6 +454,11 @@ AVSessionPresetForUIVideoQuality (UIImagePickerControllerQualityType quality)
     return((supportedOrientationsMask >> orient) & 1);
 }
 
+- (NSUInteger) supportedInterfaceOrientations
+{
+    return supportedOrientationsMask;
+}
+
 - (void) willRotateToInterfaceOrientation: (UIInterfaceOrientation) orient
                                  duration: (NSTimeInterval) duration
 {
